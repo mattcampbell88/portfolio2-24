@@ -126,14 +126,10 @@ footer .cr-con{
     width: 50%;
     float: left;
 }
-
-.my-info {
-    margin: auto;
-    float: right;
-    padding: 2rem;
-    border-radius: 20px;
-    
+.main-content img {
+  margin-left: 7rem;
 }
+
 
 @media screen and (max-width: 600px) {
   .main-content {
@@ -154,106 +150,61 @@ footer .cr-con{
   }
 }
 
-/* Conent  on portfolio.html */
+/*content on Portfolio */
+
 .gallery-container {
-  display: flex;
-  justify-content: space-around; /* Adjust this as needed */
-  margin-top: 100px;
-}
-
-@media screen and (max-width: 600px) {
-  .gallery-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    justify-content: space-around; 
-    width: 100%;
-  }
-
-  .gallery-item {
-    align-content: center;
-    padding: 1rem 3.5rem;
-  }
-}
-
-/* Style for the image and text wrapper */
-.image-container > div {
-  text-align: center;
-}
-
-/* Style for the text */
-.image-text {
-    background-color: #f6f6f6; /* Semi-transparent black background */
-  color:black;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 400px;
-  height: 140px;
-  margin-top: 10px;
-  font-size: 20px;
-  text-align: justify;
-}
-
-.image-text a {
-  color: black;
-  text-decoration: none;
-}
-
-.image-text a:hover {
-  color: white;
-  background-color: black;
+  display:flex;
+  flex-direction: row;
+  width: 94%;
+  height: 500px;
+  margin: 2rem auto;
+  
 }
 
 .gallery-item {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: flex 0.8s ease;
+ 
+  
+}
+.gallery-item:hover {
+  flex: 5;
 }
 
-.gallery-item img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform 0.3s ease; /* Add transition for smooth enlargement */
+.gallery-item:nth-child(1){
+  background-image: url(./images/jcflueweb.png);
 }
 
-.enlarge-image.enlarged {
-  position: fixed;
-  top: 5vh;
-  bottom: 5vh;
-  left: 10vh;
-  width: 90vw; /* Full width of viewport */
-  height: 90vh; /* Full height of viewport */
-  z-index: 9999; /* Ensure it appears on top of other content */
-  object-fit: cover; /* Maintain aspect ratio */
-  cursor: zoom-out; /* Change cursor to indicate it can be clicked to close */
+.gallery-item:nth-child(2){
+  background-image: url(./images/club\ website.png);
+}
+.gallery-item:nth-child(3){
+  background-image: url(./images/kava.png);
+}
+.gallery-item:nth-child(4){
+  background-image: url(./images/coding.jpg);
+}
+.gallery-item:nth-child(5){
+  background-image: url(./images/jcflueweb.png);
 }
 
-/* Style to restore original size */
-.enlarge-image:not(.enlarged) {
-  position: static; /* Restore normal document flow */
-  cursor: pointer;
-}
 
 @media screen and (max-width: 600px) {
-.gallery-item img {
-  width: 300px;
-  height: 300px;
-}
-.image-text {
-  width: 300px;
-  height: auto;
-}
 
+  .gallery-container {
+    flex-direction: column;
+  width: 100%;
+  height: 500px;
+  margin-top: 3rem;
+  }
 
-.enlarge-image.enlarged {
-  position: fixed;
-  top: 5vh;
-
-  width: 90vw; /* Full width of viewport */
-  height: 90vh; /* Full height of viewport */
- 
-}
+  footer {
+    position: fixed;
+    margin-bottom: 0;
+  }
 }
 
 /* ABOUT ME */
@@ -294,10 +245,70 @@ footer .cr-con{
   width: 300px;
   height: auto;
   padding: 10rem;
-  filter: drop-shadow(0 0 0.75rem black);
+  filter: drop-shadow(0 0 0.75rem gray);
 }
 
 .screen2 {
   background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(0,212,255,1) 100%);
+  color: white;
+}
+
+/* contact form*/
+.contactUs {
+  margin-left: 2rem;
+  margin-top: 4rem;
+
+}
+#contactForm {
+  max-width: 500px; /* set the max-width you prefer */
+  margin: 0 auto;
+  float: left;
+  margin-left: 2rem;
+} 
+
+.label {
+  width: 100%;
+}
+
+input:not([type="checkbox"]),
+#contactForm textarea {
+  width: 100%;
+}
+
+#contactForm label {
+  display: block;
+}
+
+.social-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for social media icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-linkedin {
+  background: #0A66C2;
   color: white;
 }
